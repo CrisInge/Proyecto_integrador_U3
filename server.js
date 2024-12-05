@@ -6,7 +6,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 /*const bcrypt = require('bcrypt');*/
-
+mysql://root:HseaExVURcQFFdcFCPKZQZAtBoeZIxej@junction.proxy.rlwy.net:12947/railway
 
 
 
