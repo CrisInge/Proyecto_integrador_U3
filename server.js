@@ -18,6 +18,7 @@ const app = express();
 //Middlewares
 app.use(cors());
 app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static('frontend')); //Para importar la pagina al servidor
 /*app.use(session({
@@ -287,6 +288,9 @@ app.delete('/cancelar-reservacion/:id', (req, res) => {
 });
 
 
-app.listen(3000, () => {
+const port = process.env.PORT || 3000;
+
+
+app.listen(port, () => {
     console.log('Servidor iniciado.');
 });
