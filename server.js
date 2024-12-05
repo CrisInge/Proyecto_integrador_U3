@@ -6,7 +6,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 /*const bcrypt = require('bcrypt');*/
-mysql://root:HseaExVURcQFFdcFCPKZQZAtBoeZIxej@junction.proxy.rlwy.net:12947/railway
+
 
 
 
@@ -30,10 +30,11 @@ app.use(express.static('frontend')); //Para importar la pagina al servidor
 
 // Configura la conexión con la base de datos
 const db = mysql.createConnection({
-    host: process.env.HOST,
-    user: process.env.USER,         // Ajusta el usuario
-    password: process.env.DATABASE_PASS, // Ajusta la contraseña
-    database: process.env.DATABASE// Ajusta el nombre de la base de datos
+    host: process.env.MYSQL_HOST,
+    user: process.env.MYSQL_USER,         // Ajusta el usuario
+    port: process.env.MYSQL_PORT,
+    password: process.env.MYSQL_PASSWORD, // Ajusta la contraseña
+    database: process.env.MYSQL_DATABASE// Ajusta el nombre de la base de datos
 });
 
 db.connect((err) => {
@@ -288,7 +289,7 @@ app.delete('/cancelar-reservacion/:id', (req, res) => {
 });
 
 
-const port = process.env.PORT || 3000;
+const port = process.env.MYSQLPORT || 3000;
 
 
 app.listen(port, () => {
