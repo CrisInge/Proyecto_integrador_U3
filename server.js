@@ -2,10 +2,10 @@ require('dotenv').config();
 const mysql = require('mysql');
 const express = require('express');
 const cors = require('cors');
-const session = require('express-session');
+/*const session = require('express-session');*/
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
-const bcrypt = require('bcrypt');
+/*const bcrypt = require('bcrypt');*/
 
 
 
@@ -20,11 +20,11 @@ app.use(cors());
 app.use(express.json());
 app.use(bodyParser.json());
 app.use(express.static('frontend')); //Para importar la pagina al servidor
-app.use(session({
+/*app.use(session({
     secret: process.env.SESSION_SECRET || 'claveSecreta',
     resave: false,
     saveUninitialized: true
-}));
+}));*/
 
 
 // Configura la conexión con la base de datos
