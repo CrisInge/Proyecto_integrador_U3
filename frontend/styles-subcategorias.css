@@ -1,0 +1,83 @@
+/* Estilo del modal */
+.modal {
+    display: none; /* Ocultarlo por defecto */
+    position: fixed;
+    z-index: 2000; /* Asegura que esté en el frente */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Fondo oscuro */
+    padding-top: 60px;
+    overflow: auto; /* Si el contenido es grande, se permite el scroll */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Tamaño ajustable */
+    max-width: 400px; /* Máximo tamaño */
+    border-radius: 10px;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover, .close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* -------------------------------------------------------------------------------- */
+
+/* Modal para cancelar pedido */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+.close-cancel-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-cancel-btn:hover {
+    color: black;
+}
+
+#pedidoIdInput{
+    margin-bottom: 20px;
+}
+
+#razonInput{
+    margin-bottom: 20px;
+}
+

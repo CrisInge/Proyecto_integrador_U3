@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Inicio: Panchitos Restaurant</title>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="IMG/panchitos.png" alt="img-logo-panchitos" height="100px">
+        </div>
+    </header>
+
+    <div class="redes-sociales">
+        <div class="img-ig">
+            <a target="_blank" href="https://www.instagram.com/panchitos.restaurant/?hl=es"><img src="IMG/instagram.png" alt="img-instragram" height="27px"></a>
+        </div>
+        <div class="img-fb">
+            <a target="_blank" href="https://www.facebook.com/Restaurantepanchitos/photos_by"><img src="IMG/Facebook.png" alt="img-facebook" height="25px"></a>
+        </div>
+        <div class="img-fb">
+            <a target="_blank" href="https://api.whatsapp.com/send/?phone=5216861059883&text&type=phone_number&app_absent=0"><img src="IMG/whastapp.png" alt="img-facebook" height="29px"></a>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="ei"></div>
+        <ul>
+            <li>
+                <a href="index.html">INICIO</a>
+            </li>
+            <li>
+                <a href="menu-page.html">MENU</a>
+            </li>
+            <li>
+                <a href="contact-page.html">CONTACTO</a>
+            </li>
+            <li>
+                <a href="">CONOCENOS</a>
+            </li>
+            <li>
+                <a href="reservaciones.html">RESERVAS</a>
+            </li>
+        </ul>
+        <button id="signUpButton" onclick="redirectToLogin()">
+            Sign up
+            <div class="arrow-wrapper">
+                <div class="arrow"></div>
+            </div>
+        </button>
+        <!-- <a class="btn-login" href="">Iniciar sesión</a> -->
+    </nav>
+
+    <div class="banner">
+        <div class="capa"></div>
+        <div class="info">
+            <h1>Bienvenidos a Panchitos Restaurant</h1>
+            <p>¡Bienvenidos a Panchitos Restaurant! Disfruta de lo mejor de la cocina de mariscos en un ambiente acogedor y familiar. ¡Te esperamos!</p>
+            <a class="btn-style1" href="#introduccion-panchitos">Leer Más</a>
+        </div>
+    </div>
+
+    <main><br>
+        <div id="introduccion-panchitos" class="introduccion-panchitos">
+            <div class="collage-imgs">
+                <div class="img-intro-1"></div>
+                <div class="img-intro-2"></div>
+                <div class="img-intro-3"></div>
+                <div class="img-intro-4"></div>
+            </div>
+            <div class="data-collage-introduccion">
+                <div><h3 style="color: white;">El sabor de Panchitos</h3></div>
+                <div><p style="color: #c7c7c7;">En Panchitos, nos especializamos en ofrecer los mariscos más frescos y deliciosos, preparados con amor y dedicación. Descubre nuestros sabores únicos y vive una experiencia inigualable.</p></div>
+                <div><a class="btn-style1" href="#">Conocenos!</a></div>
+            </div>
+        </div>
+        
+        <div style="display: flex; margin: 0 0 190px;">
+            <div class="div-banner-promo" style="background-image: url(IMG/fondo-blanco.jpg); background-position: center; background-size: cover; width: 80%; height: 600px;">
+                <div style="width: 65%; margin: 0 auto 15px;"><h3 style="margin: 0;">¡Reserva tu mesa en Panchitos!</h3></div>
+                <div style="width: 65%; margin: 0 auto 20px;"><span>No esperes más para disfrutar de los mariscos más frescos y deliciosos. Programa tu reserva en Panchitos Restaurant y vive una experiencia gastronómica única. ¡Te esperamos con los brazos abiertos!</span></div>
+                <div style="width: 65%; margin: 0 auto;"><a href="reservaciones.html" class="btn-menu">Programar reserva</a></div>
+            </div>
+            <div class="info-promo-panchitos" style="background-image: url(IMG/img-brindis.jpg); background-position: center; background-size: cover; width: 100%; height: 600px;"></div>
+        </div>
+
+        <div><h3 style="color: white; text-align: center;">Conoce nuestra variedad de platillos!</h3></div>
+        <div><p class="p-platillos">Desde ceviches hasta nuestros exclusivos platos principales, cada bocado es una explosión de sabor. <br> ¡Te invitamos a disfrutar de una experiencia culinaria única en Panchitos!</p></div>
+        <div class="menu-preview-container">
+            <div class="circle1">
+                <div class="img-menu1"><!-- IMG --></div>
+                <div><p style="color: rgb(219, 1, 1); margin: 0; padding: 10px 10px 0; text-align: center; font-size: 14px;">Mas Popular</p></div>
+                <div><h6 style="color: white; text-align: center;">BARRA CALIENTE</h6></div>
+            </div>
+            <div class="circle2">
+                <div class="img-menu2"><!-- IMG --></div>
+                <div><p style="color: rgb(219, 1, 1); margin: 0; padding: 10px 10px 0; text-align: center; font-size: 14px;">Mas Popular</p></div>
+                <div><h6 style="color: white; text-align: center;">DESAYUNOS</h6></div>
+            </div>
+            <div class="circle3">
+                <div class="img-menu3"><!-- IMG --></div>
+                <div><p style="color: rgb(219, 1, 1); margin: 0; padding: 10px 10px 0; text-align: center; font-size: 14px;">Mas Popular</p></div>
+                <div><h6 style="color: white; text-align: center;">POSTRES</h6></div>
+            </div>
+            <div class="crcle4">
+                <div class="img-menu4"><!-- IMG --></div>
+                <div><p style="color: rgb(219, 1, 1); margin: 0; padding: 10px 10px 0; text-align: center; font-size: 14px;">Mas Popular</p></div>
+                <div><h6 style="color: white; text-align: center;">SUSHIS</h6></div>
+            </div>
+            <div class="circle5">
+                <div class="img-menu5"></div>
+                <div><p style="color: rgb(219, 1, 1); margin: 0; padding: 10px 10px 0; text-align: center; font-size: 14px;">Mas Popular</p></div>
+                <div><h6 style="color: white; text-align: center;">TACOS</h6></div>
+            </div>
+        </div>
+        <div style="text-align: center; margin-bottom: 190px;">
+            <a class="btn-style1" href="menu-page.html">Ir al Menu</a>
+        </div>
+
+
+        <div class="banner-dinamico" style="display: flex; justify-content: center;">
+            <!-- Generated by https://smooth.ie/blogs/news/svg-wavey-transitions-between-sections -->
+            <!-- <div style="height: 250px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.98 C149.99,150.00 271.49,-49.98 500.00,49.98 L500.00,0.00 L0.00,0.00 Z" style="stroke: none; fill: rgb(0, 0, 0);"></path></svg></div> -->
+            <div style="display: flex; gap: 20px; width: 35%; height: auto; margin: auto 0; justify-content: center;">
+                <div style="background-image: url(IMG/menu-img-4.jpg); background-position: center; background-size: cover; border-top-left-radius: 30px; border-bottom-left-radius: 30px; height: 420px; width: 300px;"><!-- IMG --></div>
+                <div style="display: flex; flex-direction: column; gap: 20px;">
+                    <div style="background-image: url(IMG/aguachiles.png); background-position: center; background-size: cover; border-top-right-radius: 30px; height: 200px; width: 200px;"><!-- IMG --></div>
+                    <div style="background-image: url(IMG/menu-bebidas.jpg); background-position: center; background-size: cover; border-bottom-right-radius: 30px; height: 200px; width: 200px;"><!-- IMG --></div>
+                </div>
+            </div>
+            <div class="textos-banner-wave">
+                <div><h3>Los mejores sabores, en familia</h3></div>
+                <div><p style="font-size: 16px;">En Panchitos Restaurant, sabemos que la mejor manera de disfrutar de los platillos más deliciosos es rodeado de quienes más quieres. Ven con tu familia y comparte sabores únicos que harán que cada visita sea una experiencia deliciosa y memorable. ¡En Panchitos, comer juntos siempre es mejor!</p></div>
+                <div ><a href="contact-page.html" class="btn-style1">Contactanos!</a></div>
+            </div>
+            <!-- Generated by https://smooth.ie/blogs/news/svg-wavey-transitions-between-sections -->
+            <!-- <div class="wave" style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: rgb(0, 0, 0);"></path></svg></div> -->
+        </div>
+
+    </main>
+
+
+    <footer class="footer">
+        <div class="icon-contacts-container">
+            <div class="phones-numbers">
+                <div>
+                    <img src="IMG/calls.png" alt="">
+                </div>
+                <div class="numeros">
+                    <div><h5>Llamanos</h5></div>
+                    <div>
+                        <span style="color: rgb(216, 216, 216);">+52 (686) 123-4567, </span>
+                        <span style="color: rgb(216, 216, 216);">+52 (686) 456-78910</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mails">
+                <div>
+                    <img src="IMG/gmail.png" alt="">
+                </div>
+                <div class="correos">
+                    <div><h5>Correo</h5></div>
+                    <div>
+                        <span style="color: rgb(216, 216, 216);;">contacto@panchitos.mx</span>
+                        <span style="color: rgb(216, 216, 216);;">info@panchitos.mx</span>
+                    </div>
+                </div>
+            </div>
+            <div class="location">
+                <div>
+                    <img src="IMG/location.png" alt="">
+                </div>
+                <div class="ubicacion">
+                    <div><h5>Visitanos</h5></div>
+                    <div>
+                        <span style="color: rgb(216, 216, 216);;">Av. Rep. de Argentina 1176, Alamitos, 21210 Mexicali, B.C.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panchitos-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13436.670593553934!2d-115.4494679889745!3d32.6549825776812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d7703368474b01%3A0x2a1b068829f4747a!2sPanchitos%20Restaurant!5e0!3m2!1ses-419!2smx!4v1731971521734!5m2!1ses-419!2smx" width="100%" height="550px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="container-margin-auto">
+            <div class="container-info-page-footer">
+                <div class="container-panchitos-info">
+                    <div class="img-panchitos-footer"><img src="IMG/panchitos.png" alt="panchitos" width="140px" title="panchitos"></div>
+                    <div class="panchitos-menu" >
+                        
+                        <div class="panchitos-menu-div1">
+                            <ul>
+                                <li>
+                                    <a href="">Desayunos</a>
+                                </li>
+                                <li>
+                                    <a href="">Sushis</a>
+                                </li>
+                                <li>
+                                    <a href="">Aguachiles</a>
+                                </li>
+                                <li>
+                                    <a href="">Barra fria</a>
+                                </li>
+                                <li>
+                                    <a href="">Barra caliente</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="panchitos-menu-div2">
+                            <ul>
+                                <li>
+                                    <a href="">Tacos</a>
+                                </li>
+                                <li>
+                                    <a href="">Cortes</a>
+                                </li>
+                                <li>
+                                    <a href="">Kids</a>
+                                </li>
+                                <li>
+                                    <a href="">Postres</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="contac-us-container">
+                    <div class="contac-us">
+                        <div>
+                            <h3 style="text-align: center; height: 95px; align-content: center;" >CONTACTO</h3>
+                        </div>
+                        <div class="contactos-div">
+                            <ul>
+                                <li>
+                                    <p>contacto@panchitos.mx</p>
+                                </li>
+                                <li>
+                                    <p>(686) 105 98 83</p>
+                                </li>
+                                <li>
+                                    <p>Av. Rep. de Argentina 1176, Alamitos, 21210 Mexicali, B.C.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="legal-container">
+                    <div class="legal">
+                        <div>
+                            <h3 style="text-align: left; height: 95px; align-content: center;" >LEGAL</h3>
+                        </div>
+                        <div class="terms-and-conditions">
+                            <ul>
+                                <li>
+                                    <span>Terminos y condiciones</span>
+                                </li>
+                                <li>
+                                    <span>Politica de privacidad</span>
+                                </li>
+                                <li>
+                                    <span>Politica de Cookies</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        async function checkAuth() {
+            const response = await fetch('/api/authenticated');
+            const result = await response.json();
+    
+            if (!result.isAuthenticated) {
+                window.location.href = 'login.html';
+            } else {
+                document.getElementById('welcomeMessage').textContent = `Bienvenido, ${result.user.nombre}`;
+            }
+        }
+    
+        checkAuth();
+    </script>
+    <p id="welcomeMessage"></p>
+    
+</body>
+</html>

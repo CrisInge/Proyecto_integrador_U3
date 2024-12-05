@@ -1,0 +1,610 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	/* font-family: sans-serif;	 */
+}
+
+body{
+    background-color:black;
+    /* color: white; */
+}
+
+/* .header{
+	transition: 0.6s;
+} */
+
+.logo{
+    text-align: center;
+}
+
+.redes-sociales{
+	position: sticky;
+	top: 10px;
+	display: flex;
+	justify-content: end;
+	margin: 0 auto;
+	width: 77%;
+	margin-bottom: 5px;
+	z-index: 10;
+}
+
+.ei{
+	width: 159.45px;
+	height: 38px;
+}
+
+.container-btn-login{	
+	padding: 0 30px;
+}
+
+
+.img-ig img{
+	margin: 0 10px;
+}
+
+.img-fb img{
+	margin: 0 10px;
+}
+
+.navbar{
+    background-color: white;
+    display: flex;
+	box-shadow: 0 0 20px black;
+    justify-content: space-between;
+	margin: 0 auto;
+	width: 80%;
+	margin-bottom: 10px;
+    border: 1px solid #fff;
+    border-radius: 30px;
+	z-index: 10;
+	position: sticky; 
+	top: 48px;
+	bottom: 0;
+}
+
+.navbar ul{
+    margin: 0 10px;
+    padding: 0;
+	display: flex;
+}
+
+.navbar ul li{
+    float: left;
+    list-style: none;
+    margin: 0 20px;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+	font-size: 14px;
+}
+
+.banner{
+	width: 100%;
+	height: 600px;
+	animation: banner 10s infinite linear alternate;
+	background-size: 100% 100%;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* margin-bottom: 90px; */
+
+    /* Para hacer el efecto difuminado en la imagen de fondo */
+    /* mask-image: 
+        linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
+    -webkit-mask-image: 
+        linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%); */
+}
+@keyframes banner{
+	0%, 20%{
+		background-image: url("IMG/img-panchitos-1.jpg");
+		background-position: center;
+		background-size: cover;
+		background-attachment: fixed;
+	}
+	25%, 45%{
+		background-image: url("IMG/img-panchitos-2.jpg");
+		background-position: center;
+		background-size: cover;
+	}
+	50%, 70%{
+		background-image: url("IMG/img-panchitos-3.jpg");
+		background-position: center;
+		background-size: cover;
+	}
+	75%, 100%{
+		background-image: url("IMG/panchitos-tabla-sushi.jpg");
+		background-position: center;
+		background-size: cover;
+		background-attachment: fixed;
+	}
+}
+
+.capa{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.6);
+}
+
+.info{
+	z-index: 1;
+	width: 100%;
+	max-width: 550px;
+	text-align: center;
+}
+
+.info h1{
+	color: #fff;
+	font-size: 45px;
+	margin-bottom: 20px;
+	letter-spacing: 1px;
+}
+
+.info p{
+	color: #c7c7c7;
+	line-height: 1.7;
+	margin-bottom: 30px;
+}
+
+.btn-style1{
+	color: #fff;
+	text-decoration: none;
+	background: #3088e0;
+	padding: 16px 37px;
+	display: inline-block;
+	border-radius: 50px;
+	border: 2px solid transparent;
+	transition: background-color 0.3s, border-color 0.3s, transform 0.3s;
+}
+
+.btn-style1:hover{
+	background-color: #000000; 
+    transform: scale(1.1); 
+	border-color: #ffffff;
+}
+
+.info a, .btn-menu{
+	color: #fff;
+	text-decoration: none;
+	background: #3088e0;
+	padding: 16px 37px;
+	display: inline-block;
+	border-radius: 50px;
+	transition: background-color 0.3s, transform 0.3s;
+}
+
+.info a:hover, .btn-menu:hover{
+	background-color: #000000; /* Nuevo color de fondo */
+    transform: scale(1.1); /* Aumenta el tamaño del botón */
+}
+
+.section{
+	position: relative;
+	display: flex;
+	width: 900px;
+	height: 430px;
+	margin: 50px auto 0;
+}
+
+.section img{
+	width: 0;
+	border-radius: 20px;
+	gap: 10px;
+	flex-grow: 1;
+	object-fit: cover;
+	opacity: .8;
+	transition: .5s ease;
+	margin-bottom: 50px;
+}
+
+.section img:hover{
+	cursor: pointer;
+	width: 300px;
+	opacity: 1;
+	filter: contrast(120%);
+	
+}
+
+.h1-platillos{
+	text-align: center;
+	color: white;
+}
+
+.p-platillos{
+	text-align: center;
+	color: #c7c7c7;
+}
+
+.select-menu{
+	text-align: center;
+	margin: 300px 0;
+}
+
+.banner-dinamico{
+	/* background: #000428;  
+	background: -webkit-linear-gradient(to right, #004e92, #000428);  
+	background: linear-gradient(to right, #004e9293, #000428), url(IMG/banner-dinamico.jpg);  */
+	
+	background: #000f0d;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #0aa8f7fb, #ec04a7fa);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #000000ad, #000422d5), url(IMG/img-fondo-collage.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+	height: 600px;
+	/* height: 800px; */
+}
+
+.wave{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+.textos-banner-wave{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 33%;
+	height: 100%;
+	text-align: left;
+	color: white;
+}
+
+.textos-banner-wave div{
+	width: 70%;
+	margin: 0 auto;
+}
+
+footer{
+	color: white;
+}
+
+.container-margin-auto{
+	margin: 10px auto;
+}
+
+.container-info-page-footer{
+	display: flex;
+}
+
+/* button login ----------------------------------------------------------------- */
+
+button {
+	--primary-color: #3088E0;
+	--secondary-color: #fff;
+	--hover-color: #111;
+	--arrow-width: 10px;
+	--arrow-stroke: 2px;
+	box-sizing: border-box;
+	border: 0;
+	border-radius: 20px;
+	color: var(--secondary-color);
+	padding: 0.5em 1.8em;
+	margin: 0 1.5em 0 0;
+	background: var(--primary-color);
+	display: flex;
+	transition: 0.2s background;
+	align-items: center;
+	gap: 0.6em;
+	font-weight: bold;
+}
+  
+button .arrow-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+  
+button .arrow {
+	margin-top: 1px;
+	width: var(--arrow-width);
+	background: var(--primary-color);
+	height: var(--arrow-stroke);
+	position: relative;
+	transition: 0.2s;
+}
+  
+button .arrow::before {
+	content: "";
+	box-sizing: border-box;
+	position: absolute;
+	border: solid var(--secondary-color);
+	border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+	display: inline-block;
+	top: -3px;
+	right: 3px;
+	transition: 0.2s;
+	padding: 3px;
+	transform: rotate(-45deg);
+}
+  
+button:hover {
+	background-color: var(--hover-color);
+}
+  
+button:hover .arrow {
+	background: var(--secondary-color);
+}
+  
+button:hover .arrow:before {
+	right: 0;
+}
+
+
+/* footer styles ------------------------------------------------------------------------------ */
+
+.container-margin-auto{
+	width: 80%;
+	margin: 0 auto;
+}
+
+.container-info-page-footer{
+	display: flex;
+}
+
+.panchitos-menu{
+	display: flex;
+}
+
+.panchitos-menu-div1{
+	margin-right: 50px;
+}
+
+.panchitos-menu-div1 a, .panchitos-menu-div1 li{
+	color: white;
+	text-decoration: none;
+	list-style: none;
+	padding: 2px;
+	font-size: 14px;
+}
+
+.panchitos-menu-div2 a, .panchitos-menu-div2 li{
+	color: white;
+	text-decoration: none;
+	list-style: none;
+	padding: 2px;
+	font-size: 14px;
+}
+
+.panchitos-menu-div1 ul, .panchitos-menu-div2 ul{
+	padding: 0;
+	text-align: left;
+}
+
+.img-panchitos-footer{
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.contactos-div{
+	width: 70%;
+	margin: 0 auto;
+}
+
+.contactos-div li{
+	list-style: none;
+}
+
+.contactos-div ul, .contactos-div p{
+	padding: 0;
+}
+
+.contactos-div p{
+	padding: 2px;
+	margin: 0;
+	font-size: 14px;
+}
+
+.container-info-page-footer{
+	justify-content: space-around;
+}
+
+.panchitos-map{
+	width: 80%;
+	margin: 0 auto 70px;
+}
+
+.terms-and-conditions ul{
+	padding: 0;
+	list-style: none;
+	font-size: 14px;
+}
+
+.terms-and-conditions span, .terms-and-conditions li{
+	padding: 2px;
+}
+
+.legal-container{
+	width: 15%;
+}
+
+.phones-numbers, .mails, .location{
+	display: flex;
+	width: 20%;
+}
+
+.numeros, .correos, .ubicacion{
+	display: flex;
+	flex-direction: column;
+}
+
+.icon-contacts-container{
+	display: flex;
+	width: 80%;
+	margin: 70px auto 50px;
+	justify-content: space-around;
+}
+
+.footer{
+	margin: 130px 0 150px;
+}
+
+/* introduccion styles ------------------------------------------------------------------------------------ */
+
+.introduccion-panchitos{
+	display: flex;
+	justify-content: center;
+	height: 790px;
+}
+
+.collage-imgs{
+	display: flex;
+	gap: 20px;
+}
+
+.data-collage-introduccion{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-left: 50px;
+	width: 350px;
+}
+
+.img-intro-1{
+	background-image: url(IMG/img-intro-1.jpg); 
+	background-position: center; 
+	background-size: cover; 
+	height: 350px; 
+	width: 140px;
+	position: relative;
+	top: 225px;
+}
+
+.img-intro-2{
+	background-image: url(IMG/img-intro-2.jpg); 
+	background-position: center; 
+	background-size: cover; 
+	height: 350px; 
+	width: 140px;
+	position: relative;
+	top: 185px;
+}
+
+.img-intro-3{
+	background-image: url(IMG/img-intro-3.jpg); 
+	background-position: center; 
+	background-size: cover; 
+	height: 350px; 
+	width: 140px;
+	position: relative;
+	top: 225px;
+}
+
+.img-intro-4{
+	background-image: url(IMG/img-intro-4.jpg); 
+	background-position: center; 
+	background-size: cover;
+	height: 350px; 
+	width: 140px;
+	position: relative;
+	top: 185px;
+}
+
+
+
+
+
+
+
+
+
+/* .container{
+	padding: 60px 0;
+	width: 90%;
+	max-width: 1000px;
+	margin: auto;
+	overflow: hidden;
+} */
+
+
+/* Seleccion del menu preview pagina inicio --------------------------------------------------------------------------- */
+
+.img-menu1, .img-menu2, .img-menu3, .img-menu4, .img-menu5{
+	background-size: cover;
+	background-position: center;
+	border: 2px solid white;
+	height: 175px;
+	width: 175px;
+	border-radius: 100px;
+}
+
+.img-menu1{
+	background-image: url(IMG/menu-img-1.jpg);
+	transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.img-menu1:hover{
+	box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.5);
+      transform: translateY(-5px);
+}
+
+.img-menu2{
+	background-image: url(IMG/menu-img-2.jpg);
+	transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.img-menu2:hover{
+	box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.5);
+      transform: translateY(-5px);
+}
+
+.img-menu3{
+	background-image: url(IMG/menu-img-3.jpg);
+	transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.img-menu3:hover{
+	box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.5);
+      transform: translateY(-5px);
+}
+
+.img-menu4{
+	background-image: url(IMG/sushis.png);
+	transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.img-menu4:hover{
+	box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.5);
+      transform: translateY(-5px);
+}
+
+.img-menu5{
+	background-image: url(IMG/tacos.png);
+	transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.img-menu5:hover{
+	box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.5);
+      transform: translateY(-5px);
+}
+
+
+.menu-preview-container{
+	display: flex;
+	justify-content: center;
+	width: 80%;
+	gap: 70px;
+	margin: 80px auto 80px;
+	flex-wrap: wrap;
+}
+
+
+/* ---------------------------------------- */
+
+
+.div-banner-promo{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+
+/* EJS ------------------------------------------------------ */
