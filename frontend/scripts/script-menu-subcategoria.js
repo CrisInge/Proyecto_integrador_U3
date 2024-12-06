@@ -65,7 +65,7 @@ async function realizarPedido(idSubcategoria, nombrePlatillo, precio, cantidad) 
     };
 
     try {
-        const response = await fetch('http://localhost:3000/api/pedidos', {
+        const response = await fetch('https://proyectointegradoru3-production.up.railway.app/api/pedidos', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -132,7 +132,7 @@ confirmarCancelacionBtn.addEventListener("click", async () => {
     }
 
     try {
-        const response = await fetch(`http://localhost:3000/api/pedidos/${pedidoId}`, {
+        const response = await fetch(`https://proyectointegradoru3-production.up.railway.app/api/pedidos/${pedidoId}`, {
             method: "DELETE",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ razon: razonCancelacion }) // Enviar la razón al backend
