@@ -9,7 +9,7 @@ const EMAIL_USER = process.env.EMAIL_USER || 'cristianeche222@gmail.com';
 const EMAIL_PASS = process.env.EMAIL_PASS || 'akvewrynhtpopvfa';
 const EMAIL_RESTAURANT = process.env.EMAIL_RESTAURANT || 'cristianeche222@gmail.com';
 
-/*mysql://root:aigfIYKeFRcpUJomkBTdAnatWMBlDVNs@autorack.proxy.rlwy.net:21100/railway*/
+/*mysql://root:CtlFaYnImgFsZTSFauFZrMSYoKwpqnHI@junction.proxy.rlwy.net:57225/railway*/
 
 module.exports = {
     DB_HOST,

@@ -8,7 +8,7 @@ async function cargarSubcategorias() {
     }
 
     try {
-        const response = await fetch(`http://localhost:3000/api/subcategorias?categoria=${categoriaId}`);
+        const response = await fetch(`https://proyectointegradoru3-production.up.railway.app/api/subcategorias?categoria=${categoriaId}`);
         const subcategorias = await response.json();
 
         const container = document.querySelector('.option-menu-container');
