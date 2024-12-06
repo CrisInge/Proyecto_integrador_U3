@@ -1,7 +1,7 @@
 /*import { PORT } from './config.js'*/
 
 require('dotenv').config();
-/*const { DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, DB_PORT } = require('./config');*/
+const { DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, DB_PORT, PORT, EMAIL_USER, EMAIL_PASS, EMAIL_RESTAURANT } = require('./config');
 const mysql = require('mysql2');
 const express = require('express');
 const cors = require('cors');
@@ -33,11 +33,11 @@ app.use(express.static('frontend')); //Para importar la pagina al servidor
 
 // Configura la conexión con la base de datos
 const db = mysql.createConnection({
-    host: process.env.DB_HOST,
-    port: process.env.DB_PORT,
-    user: process.env.DB_USER,         // Ajusta el usuario
-    password: process.env.DB_PASSWORD, // Ajusta la contraseña
-    database: process.env.DB_NAME  // Ajusta el nombre de la base de datos
+    host: DB_HOST,
+    port: DB_PORT,
+    user: DB_USER,         // Ajusta el usuario
+    password: DB_PASSWORD, // Ajusta la contraseña
+    database: DB_NAME  // Ajusta el nombre de la base de datos
 });
 
 db.connect((err) => {
@@ -165,15 +165,15 @@ app.post('/api/contact', (req, res) => {
             port: 465,       
             secure: true,
             auth: {
-                user: process.env.EMAIL_USER,  // Tu correo (para autenticar el servidor)
-                pass: process.env.EMAIL_PASS   // Contraseña de tu correo o token de aplicación
+                user: EMAIL_USER,  // Tu correo (para autenticar el servidor)
+                pass: EMAIL_PASS   // Contraseña de tu correo o token de aplicación
             }
         });
         
         // Configuración del correo
         const mailOptions = {
             from: email,  // Usar el correo del formulario como remitente
-            to: process.env.EMAIL_RESTAURANT,  // Correo donde recibes el mensaje
+            to: EMAIL_RESTAURANT,  // Correo donde recibes el mensaje
             subject: `Nuevo mensaje de ${name}`,  // Asunto del correo
             text: message  // Contenido del mensaje
         };
@@ -291,7 +291,6 @@ app.delete('/cancelar-reservacion/:id', (req, res) => {
     });
 });
 
-const PORT = process.env.PORT;
 
 app.listen(PORT, () => {
     console.log('Servidor iniciado.');
