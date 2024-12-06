@@ -8,7 +8,7 @@ document.getElementById('contactForm').addEventListener('submit', async (e) => {
     const data = Object.fromEntries(formData);
 
     try {
-        const response = await fetch('http://localhost:3000/api/contact', {
+        const response = await fetch('https://proyectointegradoru3-production.up.railway.app/api/contact', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data),
