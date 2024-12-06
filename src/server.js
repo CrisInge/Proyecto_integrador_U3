@@ -2,7 +2,7 @@
 
 require('dotenv').config();
 const { DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, DB_PORT } = require('./config');
-const mysql = require('mysql');
+const mysql = require('mysql2');
 const express = require('express');
 const cors = require('cors');
 /*const session = require('express-session');*/
