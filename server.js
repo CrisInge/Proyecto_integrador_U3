@@ -30,11 +30,11 @@ app.use(express.static('frontend')); //Para importar la pagina al servidor
 
 // Configura la conexión con la base de datos
 const db = mysql.createConnection({
-    host: process.env.MYSQL_HOST,
-    user: process.env.MYSQL_USER,         // Ajusta el usuario
-    port: process.env.MYSQL_PORT,
-    password: process.env.MYSQL_PASSWORD, // Ajusta la contraseña
-    database: process.env.MYSQL_DATABASE// Ajusta el nombre de la base de datos
+    host: process.env.MYSQL_HOST || '127.0.0.1',
+    port: process.env.MYSQL_PORT || 3306,
+    user: process.env.MYSQL_USER || 'root',         // Ajusta el usuario
+    password: process.env.MYSQL_PASSWORD || '', // Ajusta la contraseña
+    database: process.env.MYSQL_DATABASE || 'test'// Ajusta el nombre de la base de datos
 });
 
 db.connect((err) => {
@@ -289,9 +289,9 @@ app.delete('/cancelar-reservacion/:id', (req, res) => {
 });
 
 
-const port = process.env.MYSQLPORT || 3000;
+const PORT = process.env.PORT || 3000;
 
 
-app.listen(port, () => {
+app.listen(PORT, () => {
     console.log('Servidor iniciado.');
 });
