@@ -13,7 +13,7 @@
 <script>
     async function cargarCategorias() {
         try {
-            const response = await fetch('http://localhost:3000/api/categorias');
+            const response = await fetch('https://proyectointegradoru3-production.up.railway.app/api/categorias');
             const categorias = await response.json();
 
             const container = document.querySelector('.option-menu-container');
