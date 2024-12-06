@@ -1,4 +1,7 @@
+/*import { PORT } from './config.js'*/
+
 require('dotenv').config();
+const { DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, DB_PORT } = require('./config');
 const mysql = require('mysql');
 const express = require('express');
 const cors = require('cors');
@@ -30,11 +33,11 @@ app.use(express.static('frontend')); //Para importar la pagina al servidor
 
 // Configura la conexión con la base de datos
 const db = mysql.createConnection({
-    host: process.env.DB_HOST || '127.0.0.1',
-    port: process.env.DB_PORT || 3306,
-    user: process.env.DB_USER || 'root',         // Ajusta el usuario
-    password: process.env.DB_PASSWORD || '', // Ajusta la contraseña
-    database: process.env.DB_DATABASE || 'test'// Ajusta el nombre de la base de datos
+    host: DB_HOST,
+    port: DB_PORT,
+    user: DB_USER,         // Ajusta el usuario
+    password: DB_PASSWORD, // Ajusta la contraseña
+    database: DB_NAME  // Ajusta el nombre de la base de datos
 });
 
 db.connect((err) => {
@@ -288,9 +291,7 @@ app.delete('/cancelar-reservacion/:id', (req, res) => {
     });
 });
 
-
-const PORT = process.env.DB_PORT || 3000;
-
+const PORT = process.env.PORT;
 
 app.listen(PORT, () => {
     console.log('Servidor iniciado.');
